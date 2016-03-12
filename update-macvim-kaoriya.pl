@@ -22,7 +22,7 @@ sub fetch_url ($url, %opt) : prototype($;@) {
 }
 
 sub release_version ($url) : prototype($) {
-    if (fetch_url($url) =~ /Vim (\d\.\d\.\d+)/) {
+    if (fetch_url($url) =~ /Vim (\d\.\d)/) {
         $1;
     } else {
         die "can't detect vim version: $url";
@@ -32,11 +32,11 @@ sub release_version ($url) : prototype($) {
 sub formula ($formula_path, $release_version, $release_date, $dmg_hash, $appcast_hash) : prototype($$$$$) {
     my $formula = file($formula_path)->slurp;
     $formula =~ s/else
-    version '\d\.\d\.\d+-\d+'
+    version '\d+\.\d+:\d+'
     sha256 '[\da-f]+'/else
-    version '$release_version-$release_date'
+    version '$release_version:$release_date'
     sha256 '$dmg_hash'/;
-    $formula =~ s/(?<=:checkpoint => ')[\da-f]+/$appcast_hash/;
+    $formula =~ s/(?<=checkpoint: ')[\da-f]+/$appcast_hash/;
     $formula;
 }
 
