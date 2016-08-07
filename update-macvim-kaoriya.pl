@@ -61,4 +61,4 @@ __DATA__
 formula_path: /usr/local/Library/Taps/caskroom/homebrew-versions/Casks/macvim-kaoriya.rb
 dmg_url:      https://github.com/splhack/macvim-kaoriya/releases/download/$release_date/MacVim-KaoriYa-$release_date.dmg
 release_url:  https://github.com/splhack/macvim-kaoriya/releases/tag/$release_date
-appcast_url:  https://raw.githubusercontent.com/splhack/macvim-kaoriya/master/latest.xml
+appcast_url:  https://github.com/splhack/macvim-kaoriya/releases.atom
