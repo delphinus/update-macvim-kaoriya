@@ -42,7 +42,7 @@ sub formula ($formula_path, $release_version, $release_date, $dmg_hash, $appcast
 
 sub main () {
     my $release_date = shift @ARGV;
-    die "please specify reelase_date\n" unless $release_date;
+    die "please specify release_date\n" unless $release_date;
 
     (my $conf_yaml = do { local $/; <DATA> }) =~ s/\$release_date/$release_date/g;
     my $conf = Load $conf_yaml;
