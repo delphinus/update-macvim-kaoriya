@@ -58,7 +58,7 @@ main if __FILE__ eq $0;
 
 __DATA__
 ---
-formula_path: /usr/local/Library/Taps/caskroom/homebrew-versions/Casks/macvim-kaoriya.rb
+formula_path: /usr/local/Homebrew/Library/Taps/delphinus/homebrew-macvim-kaoriya/Casks/macvim-kaoriya.rb
 dmg_url:      https://github.com/splhack/macvim-kaoriya/releases/download/$release_date/MacVim-KaoriYa-$release_date.dmg
 release_url:  https://github.com/splhack/macvim-kaoriya/releases/tag/$release_date
 appcast_url:  https://github.com/splhack/macvim-kaoriya/releases.atom
